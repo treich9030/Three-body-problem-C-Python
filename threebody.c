@@ -67,7 +67,7 @@ int main()
 
 }
 
-/*Promts a TUI for the user to select from*/
+/*Prompts a TUI for the user to select from*/
 void menu_open(int *option)
 {
     printf("Welcome to my graviational three body simulator!\n");

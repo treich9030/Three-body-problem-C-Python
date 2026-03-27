@@ -14,7 +14,7 @@ While the majority of interative-based numerical analyses of situations such as 
 
 This simulation includes several presets for the initial positions and velocities of the three bodies, including classical solutions, modern stable solutions, and modern unstable solutions to the three-body problem. An example simulation of perhaps the most famous stable solution to the three-body problem, the Lagrange equilateral triangle, is displayed below.
 
-![Custom GIF](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/Lagrange.gif)
+![Lagrange Preset GIF](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/Lagrange.gif)
 
 Note about the modern unstable solutions: they are unstable over longer simulations, which means that the default dt, frame_skip, and duration values in the program(s) may not work well. Consider adjusting if you wish to run these presets. The initial parameters for the modern unstable solutions used come from the Institute of Physics at Belgrade, specifically [here](http://three-body.ipb.ac.rs/). 
 
@@ -25,9 +25,10 @@ mass x_coordinate y_coordinate velocity_x velocity_y
 ```
 where there are three rows, one for each orbital body. An example is given in custominput.txt, whose simulation is displayed below. 
 
-![Custom GIF](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/Custom.gif)
+![Custom Preset GIF](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/Custom.gif)
 
 ## Inteative Method -- RK4
 The iterative method used here is known as RK4, from the Runge-Kutta family of iterative methods used in numerical analysis. RK4 takes four seperate derivitves of the sample data along one time step (k1 at t = 0, k2 & k3 at t = dt/2, k4 at t = dt) instead of one derivitve at the start of each time step. The inclusion of four slopes instead of one creates a much more accurate iteration, and can follow rapid fluctuation in sample data more easily than a simpley method such as Euler's.
 
+![RK4 PNG](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/rk4.png)
 Image courtesy of Low-Dimensional Energy Balance Models by Benjamin Schmiedel

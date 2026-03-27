@@ -9,6 +9,9 @@ void preset_figure8(double *bodies, double *masses);
 void preset_broucke(double *bodies, double *masses);
 void preset_henon(double *bodies, double *masses);
 void preset_yarn(double *bodies, double *masses);
+void preset_yinyang(double *bodies, double *masses);
+void preset_dragonfly(double *bodies, double *masses);
+void preset_sheen(double *bodies, double *masses);
 void preset_custom(double *bodies, double *masses);
 void derivative(double *bodies, double *masses, double *deriv_bodies);
 void rk4_integration(double *bodies, double *masses, double dt);
@@ -70,10 +73,10 @@ int main()
 /*Prompts a TUI for the user to select from*/
 void menu_open(int *option)
 {
-    printf("Welcome to my graviational three body simulator!\n");
-    printf("Please select a stable solution to simulate, or simualte a custom configuration\n");
+    printf("\nWelcome to my graviational three body simulator!\n");
+    printf("Please select a stable solution to simulate, or simualte a custom configuration\n\n");
     printf("Classical Solutions:\n[1] Lagrange's Triangle\t[2] Euler's Collinear\n");
-    printf("Modern Stable Solutions:\n[3] Figure-8\t\t[4] Broucke\t\t[5] Henon\n");
+    printf("Modern Stable Solutions:\n[3] Figure-8\t\t[4] Broucke\n[5] Henon\n");
     printf("Modern Unstable Solutions (see README):\n");
     printf("[6] Yarn\t\t[7] Yin-Yang 1a\n[8] Dragonfly\t\t[9] Sheen I\n");
     printf("[10] Custom Configuration -- see README for details\n");
@@ -343,7 +346,7 @@ void rk4_integration(double *bodies, double *masses, double dt)
 /*Calculates and pastes data into data.csv using RK4 integration*/
 void simulate(double *bodies, double *masses)
 {
-    double dt = 1e-3;
+    double dt = 1e-2; /*Time step*/
     double time_tot = 0.0;
     FILE *fptr = fopen("data.csv", "w");
     if (fptr == NULL) {

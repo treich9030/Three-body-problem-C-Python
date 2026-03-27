@@ -5,8 +5,8 @@ import plotly.graph_objects as go
 
 df = pd.read_csv("data.csv", header = None, names = ["x0", "y0", "x1", "y1", "x2", "y2"])
 
-frame_skip = 100
-trail_length = 100             
+frame_skip = 20
+trail_length = 300             
 duration  = 33.3 # ms per frame  
 
 colors = ["#6D1D31", "#1F306E", "#39B939"]

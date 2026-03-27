@@ -28,7 +28,7 @@ where there are three rows, one for each orbital body. An example is given in cu
 ![Custom Preset GIF](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/Custom.gif)
 
 ## Inteative Method -- RK4
-The iterative method used here is known as RK4, from the Runge-Kutta family of iterative methods used in numerical analysis. RK4 takes four seperate derivitves of the sample data along one time step (k1 at t = 0, k2 & k3 at t = dt/2, k4 at t = dt) instead of one derivitve at the start of each time step. The inclusion of four slopes instead of one creates a much more accurate iteration, and can follow rapid fluctuation in sample data more easily than a simpley method such as Euler's.
+The iterative method used here is known as RK4, from the Runge-Kutta family of iterative methods used in numerical analysis. RK4 takes four seperate derivitves of the sample data along one time step (k1 at t = 0, k2 & k3 at t = dt/2, k4 at t = dt) instead of one derivitve at the start of each time step. The inclusion of four slopes instead of one creates a much more accurate iteration, and can follow rapid fluctuation in sample data more easily than a simpler method such as Euler's.
 
 ![RK4 PNG](https://raw.githubusercontent.com/treich9030/Three-body-problem-C-Python/main/demo/rk4.png)
 Image courtesy of Low-Dimensional Energy Balance Models by Benjamin Schmiedel
